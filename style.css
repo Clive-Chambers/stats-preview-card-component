@@ -3,14 +3,11 @@
     padding: 0;
     margin: 0;
 }
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap');
 
-/* font-family: 'Inter', sans-serif;
-font-family: 'Lexend Deca', sans-serif; */
 
 body {
     font-size: 15px;
-    font-family: 'Inter', sans-serif;
+    font-family: 'Lexend Deca', sans-serif;
     background-color: hsl(233, 47%, 7%);
     color: hsla(0, 0%, 100%, 0.75);
 }
@@ -33,12 +30,15 @@ main#container .card {
     overflow: hidden;
 }
 
+/*---- Main Image Styles ----*/
+
 img{
     width: 100%;
 }
 
 .office-img {
     position: relative;
+    
 }
 
 .office-img::after {
@@ -50,8 +50,17 @@ img{
     position: absolute;
     top: 0;
     left: 0;
+    opacity: .7;
     mix-blend-mode: color;
 }
+
+@supports (mix-blend-mode: color) {
+    .office-img::after {
+        opacity: 1;
+    }
+}
+
+/*---- Info Content ----*/
 
 .info {
     text-align: center;
@@ -60,15 +69,16 @@ img{
     
 }
 
+
 .info h1 {
     margin: 1.2rem;
     color: hsl(0, 0%, 100%);
-    font-family: 'Lexend Deca', sans-serif;
+    font-family: 'Inter', sans-serif;
     padding: 0 1.2rem;
 }
 
 .info p {
-    padding: 0 1.2rem;
+    padding: 0 .4rem;
     line-height: 1.7rem;
 }
 
@@ -76,14 +86,18 @@ span.highlight {
     color: hsl(277, 64%, 61%);
 }
 
+/*---- Stats Section ----*/
+
 .stats {
     text-transform: uppercase;
 }
+
 .stat {
     margin-top: 3rem;
     color: hsl(0, 0%, 100%);
     font-weight: 700;
     font-size: 1.4rem;
+    font-family: 'Inter', sans-serif;
 }
 
 .stat-heading {
@@ -100,11 +114,20 @@ span.highlight {
     text-align: center;
     margin: 3rem 0; 
 }
+
 .attribution a {
      color: hsl(228, 45%, 44%); 
 }
 
+.attribution a:hover {
+    color: hsl(277, 64%, 61%); 
+}
+
+
+/*---- Desktop Media Query ----*/
+
 @media (min-width: 1034px) {
+
     main#container {
         margin: 0;
     }
@@ -117,6 +140,13 @@ span.highlight {
         background-color: hsl(244, 38%, 16%);
         border-radius: 16px;
         overflow: hidden;
+        padding: 0 1rem;
+    }
+
+    img{
+        width: 100%;
+        height: 450px;
+        object-fit: cover;
     }
 
     .info {
@@ -127,10 +157,12 @@ span.highlight {
     .info h1 {
         padding: 0;
         margin-top: 4rem;
+        margin-left: .4rem;
     }
 
     .stats {
         display: flex;
+        margin-top: 2rem;
     }
 
     .info p {
