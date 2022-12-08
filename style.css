@@ -11,10 +11,83 @@ font-family: 'Lexend Deca', sans-serif; */
 body {
     font-size: 15px;
     font-family: 'Inter', sans-serif;
+    background-color: hsl(233, 47%, 7%);
+    color: hsla(0, 0%, 100%, 0.75);
+}
+
+main#container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 5rem 0;
+
+}
+
+main#container .card {
+    max-width: 420px;
+    background-color: hsl(244, 38%, 16%);
+    border-radius: 16px;
+    overflow: hidden;
 }
 
 img{
     width: 100%;
+}
+
+.office-img {
+    position: relative;
+}
+
+.office-img::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: hsl(277, 64%, 61%);
+    position: absolute;
+    top: 0;
+    left: 0;
+    mix-blend-mode: color;
+}
+
+.info {
+    text-align: center;
+    padding: 1rem 3rem;
+    margin-bottom: 3rem;
+    
+}
+
+.info h1 {
+    margin: 1.2rem;
+    color: hsl(0, 0%, 100%);
+    font-family: 'Lexend Deca', sans-serif;
+    padding: 0 1.2rem;
+}
+
+.info p {
+    padding: 0 3.5rem;
+    line-height: 1.7rem;
+}
+
+span.highlight {
+    color: hsl(277, 64%, 61%);
+}
+
+.stats {
+    text-transform: uppercase;
+}
+.stat {
+    margin-top: 3rem;
+    color: hsl(0, 0%, 100%);
+    font-weight: 700;
+    font-size: 1.4rem;
+}
+
+.stat-heading {
+    color: hsla(0, 0%, 100%, 0.6);
 }
 
 
@@ -23,7 +96,8 @@ img{
 
 .attribution { 
     font-size: 11px; 
-    text-align: center; 
+    text-align: center;
+    margin: 3rem 0; 
 }
 .attribution a {
      color: hsl(228, 45%, 44%); 
