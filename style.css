@@ -27,9 +27,9 @@ main#container {
 }
 
 main#container .card {
-    max-width: 420px;
+    max-width: 350px;
     background-color: hsl(244, 38%, 16%);
-    border-radius: 16px;
+    border-radius: 6px;
     overflow: hidden;
 }
 
@@ -55,7 +55,7 @@ img{
 
 .info {
     text-align: center;
-    padding: 1rem 3rem;
+    padding: 1rem 2rem;
     margin-bottom: 3rem;
     
 }
@@ -68,7 +68,7 @@ img{
 }
 
 .info p {
-    padding: 0 3.5rem;
+    padding: 0 1.2rem;
     line-height: 1.7rem;
 }
 
@@ -88,6 +88,7 @@ span.highlight {
 
 .stat-heading {
     color: hsla(0, 0%, 100%, 0.6);
+    font-size: .8rem;
 }
 
 
@@ -101,4 +102,42 @@ span.highlight {
 }
 .attribution a {
      color: hsl(228, 45%, 44%); 
+}
+
+@media (min-width: 1034px) {
+    main#container {
+        margin: 0;
+    }
+    
+    main#container .card {
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        max-width: 1000px;
+        background-color: hsl(244, 38%, 16%);
+        border-radius: 16px;
+        overflow: hidden;
+    }
+
+    .info {
+        text-align: left;
+        width: 50%;
+    }
+
+    .info h1 {
+        padding: 0;
+        margin-top: 4rem;
+    }
+
+    .stats {
+        display: flex;
+    }
+
+    .info p {
+        padding-right: 2.3rem;
+    
+    }
+    .attribution { 
+        margin: 0 0 3rem 0; 
+    }
 }
