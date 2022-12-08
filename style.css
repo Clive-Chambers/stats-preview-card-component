@@ -140,7 +140,7 @@ span.highlight {
         background-color: hsl(244, 38%, 16%);
         border-radius: 16px;
         overflow: hidden;
-        padding: 0 1rem;
+        padding: 0;
     }
 
     img{
@@ -155,7 +155,7 @@ span.highlight {
     }
 
     .info h1 {
-        padding: 0;
+        padding: 0 .5rem 0 0;
         margin-top: 4rem;
         margin-left: .4rem;
     }
