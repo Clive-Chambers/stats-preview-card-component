@@ -28,44 +28,35 @@ main#container .card {
     background-color: hsl(244, 38%, 16%);
     border-radius: 6px;
     overflow: hidden;
+
 }
 
 /*---- Main Image Styles ----*/
 
-img{
-    width: 100%;
-    height: 100%;
-}
+
 
 .office-img {
+    display: inherit;
     position: relative;
+    max-height: 289px;
+    background-color: hsl(277, 64%, 61%);
     
 }
 
-.office-img::after {
-    content: '';
-    display: block;
+img{
     width: 100%;
     height: 100%;
-    background-color: hsl(277, 64%, 61%);
-    position: absolute;
-    top: 0;
-    left: 0;
-    opacity: .7;
+    position: relative;
+    background-size: cover;
     mix-blend-mode: multiply;
-}
-
-@supports (mix-blend-mode: multiply) {
-    .office-img::after {
-        opacity: .75;
-    }
+    opacity: 0.75;
 }
 
 /*---- Info Content ----*/
 
 .info {
     text-align: center;
-    padding: 1rem 2rem;
+    padding: 1rem 1rem;
     margin-bottom: 3rem;
     
 }
@@ -75,11 +66,11 @@ img{
     margin: 1.2rem;
     color: hsl(0, 0%, 100%);
     font-family: 'Inter', sans-serif;
-    padding: 0 1.2rem;
+    padding: 0 0rem;
 }
 
 .info p {
-    padding: 0 .4rem;
+    padding: 0 1.6rem;
     line-height: 1.7rem;
 }
 
@@ -138,13 +129,18 @@ span.highlight {
         flex-direction: row-reverse;
         align-items: center;
         max-width: 1000px;
+        max-height: 446px;
         background-color: hsl(244, 38%, 16%);
         border-radius: 16px;
         overflow: hidden;
         padding: 0;
     }
 
-    img{
+    .office-img {
+        max-height: 100%;        
+    }
+
+    img {
         width: 100%;
         height: 450px;
         object-fit: cover;
@@ -156,7 +152,7 @@ span.highlight {
     }
 
     .info h1 {
-        padding: 0 .5rem 0 0;
+        padding: 0 1.2rem;
         margin-top: 4rem;
         margin-left: .4rem;
     }
@@ -171,6 +167,6 @@ span.highlight {
     
     }
     .attribution { 
-        margin: 0 0 3rem 0; 
+        margin: 3rem 0; 
     }
 }
